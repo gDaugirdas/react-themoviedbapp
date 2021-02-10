@@ -1,0 +1,63 @@
+@import '../../variables.scss';
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+  &--base-border-radius {
+    border-radius: $base-border-radius;
+  }
+  &--special-border-radius {
+    border-radius: $special-border-radius;
+  }
+
+  &__shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &--special {
+      border-top-left-radius: $special-border-radius;
+      border-top-right-radius: $special-border-radius;
+    }
+    &--base {
+      border-radius: $special-border-radius;
+    }
+  }
+
+  &--container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__hover {
+    &--shadow {
+      &:hover .image__shadow {
+        box-shadow: inset 0 0 4.5rem 0 $color-ritch-black;
+        transition: box-shadow 0.1s linear;
+      }
+    }
+    &--scale {
+      &:hover .image {
+        transform: scale(1.02);
+      }
+    }
+  }
+  &__selected {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 0.1rem 0.4rem $color-yellow;
+    border-radius: $base-border-radius;
+  }
+
+  &--cursor-default {
+    cursor: default;
+  }
+}

@@ -1,0 +1,182 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/layout.scss';
+
+.media {
+  &__similar {
+    &--container {
+      width: 100%;
+      display: flex;
+    }
+    &-heading {
+      text-align: center;
+      font-size: 2.8rem;
+      font-family: 'Bungee', cursive;
+      letter-spacing: 0.7rem;
+      padding: 1.5rem 0;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      &-item {
+        width: 31%;
+        margin: 0.5rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &__selected {
+    &--container {
+      width: 50%;
+      display: flex;
+      margin: 0.5rem;
+    }
+
+    &-main {
+      &--container {
+        width: 30rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &-button {
+      &--container {
+        flex: 1;
+        align-items: center;
+      }
+      &--desktop {
+        display: flex;
+      }
+      &--mobile {
+        display: none;
+      }
+    }
+
+    &-text {
+      &--container {
+        width: 50%;
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+      }
+      &-link {
+        text-decoration: none;
+        color: $color-blue;
+        &:hover {
+          text-decoration: underline;
+          text-underline-position: below;
+        }
+      }
+    }
+    &-title {
+      font-size: 2.4rem;
+    }
+    &-genre {
+      font-size: 1.8rem;
+      margin: 1rem 0;
+      font-weight: 600;
+    }
+    &-date {
+      font-size: 2.2rem;
+      color: $color-ash;
+      align-self: center;
+      margin-left: 0.2rem;
+    }
+    &-rating {
+      font-size: 1.8rem;
+      &--container {
+        display: flex;
+        align-items: center;
+      }
+      &-icon {
+        fill: $color-yellow;
+        margin-left: 0.2rem;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    &-overview {
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      margin: 1rem 0;
+    }
+  }
+  @include medium {
+    &__similar {
+      &--container {
+        flex-direction: column-reverse;
+      }
+      &-list {
+        flex-wrap: nowrap;
+        width: 100%;
+      }
+    }
+    &__selected {
+      &--container {
+        width: 100%;
+      }
+    }
+    &__selected {
+      &-main {
+        &--container {
+          width: 32%;
+        }
+      }
+      &-text {
+        &--container {
+          width: 68%;
+        }
+      }
+
+      &-button {
+        &--desktop {
+          display: none;
+        }
+        &--mobile {
+          display: flex;
+        }
+      }
+    }
+  }
+  @include small {
+    &__selected {
+      &--container {
+        flex-direction: column;
+        margin: 0;
+      }
+
+      &-main {
+        &--container {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+      &-text {
+        &--container {
+          width: 100%;
+          margin: 1rem auto;
+        }
+      }
+      &-overview {
+        font-size: 1.8rem;
+      }
+      &-genre {
+        margin: 0.5rem 0;
+      }
+    }
+    &__similar {
+      &-heading {
+        font-size: 2.4rem;
+      }
+      &-list {
+        flex-wrap: wrap;
+        &-item {
+          margin: 1%;
+        }
+      }
+    }
+  }
+}

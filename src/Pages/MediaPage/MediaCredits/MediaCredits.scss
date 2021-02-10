@@ -1,0 +1,61 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/layout.scss';
+
+.media {
+  &__link {
+    &-watchonline {
+      text-decoration: none;
+    }
+  }
+  &__button {
+    &--container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  &__credits {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+
+    &-item {
+      padding: 0.2rem 0;
+    }
+
+    &--container {
+      font-size: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+    &-link {
+      &:first-of-type {
+        margin-left: 0.5rem;
+      }
+    }
+    &-comma {
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  @include small {
+    &__credits {
+      flex-direction: column;
+      &--container {
+        width: 100%;
+        margin: 0 0.5rem;
+      }
+    }
+    &__button {
+      &--container {
+        padding-top: 0.6rem;
+        flex-direction: column;
+      }
+    }
+  }
+}

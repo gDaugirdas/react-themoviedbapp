@@ -1,0 +1,86 @@
+.carousel {
+  &__person {
+    &-item {
+      display: flex;
+    }
+    &-link {
+      text-decoration: none;
+    }
+    &-image {
+      &--container {
+        width: 30rem;
+      }
+    }
+    &-details {
+      &--container {
+        padding: 1rem 2rem;
+        word-break: break-word;
+      }
+      &-list {
+        padding: 2rem 0;
+      }
+      &-name {
+        color: $color-white;
+        font-size: 2.4rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &-title {
+        color: $color-yellow;
+        padding: 0.5rem 0;
+        font-size: 2.3rem;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &-credit {
+        padding-bottom: 0.5rem;
+      }
+      &-department {
+        margin-bottom: 1rem;
+      }
+    }
+    @include medium {
+      &-item {
+        flex-direction: column;
+      }
+      &-image {
+        &--container {
+          width: 100%;
+        }
+      }
+
+      &-details {
+        &-list {
+          padding-bottom: 0;
+        }
+        &--container {
+          padding: 1rem 0;
+        }
+      }
+    }
+    @include small {
+      &__image {
+        &--container {
+          width: 14rem;
+        }
+      }
+      &-details {
+        &-title {
+          font-size: 1.8rem;
+        }
+        &-name {
+          font-size: 2rem;
+        }
+        &-department {
+          font-size: 1.5rem;
+        }
+        &-list {
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+}

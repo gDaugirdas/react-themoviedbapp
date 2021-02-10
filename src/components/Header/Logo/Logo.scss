@@ -1,0 +1,27 @@
+@import '../../../scss/layout.scss';
+@import '../../../scss/variables.scss';
+
+.logo {
+  &__image {
+    width: 12rem;
+    height: 3.8rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+  }
+
+  &--container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  @include small {
+    &__image {
+      width: 9.5rem;
+      height: 3rem;
+    }
+  }
+}

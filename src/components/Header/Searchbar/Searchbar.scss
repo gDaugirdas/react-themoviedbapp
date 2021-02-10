@@ -1,0 +1,119 @@
+@import '../../../scss/layout.scss';
+@import '../../../scss/variables.scss';
+
+.searchbar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &--container {
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    position: relative;
+    padding: 0 0.5rem;
+    flex: 1;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0 0.5rem;
+    border-bottom-left-radius: $base-border-radius;
+    border-top-left-radius: $base-border-radius;
+    outline: 0;
+
+    &:focus {
+      box-shadow: inset 0px 0px 0.1rem 0.1rem $color-yellow;
+    }
+
+    &--container {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    border-bottom-right-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    padding: 0 1rem;
+  }
+
+  &__icon {
+    width: 1.8rem;
+    fill: $color-ritch-black;
+
+    &--white {
+      fill: $color-white;
+    }
+  }
+
+  @include medium {
+    &--container {
+      flex: 2;
+    }
+  }
+
+  @include small {
+    justify-content: flex-end;
+
+    &--container {
+      width: 100%;
+    }
+
+    &__button {
+      background-color: transparent;
+      outline: 0;
+      width: 3rem;
+      height: 3rem;
+      padding: 0.6rem;
+      margin-right: 0.5rem;
+      &:hover {
+        background-color: $color-jet;
+        border-radius: $base-border-radius;
+      }
+    }
+
+    &__icon {
+      fill: $color-white;
+      width: 2.2rem;
+    }
+
+    &__input {
+      background-color: transparent;
+      outline: 0;
+      color: $color-white;
+      padding: 0 1rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &--container {
+        position: fixed;
+        top: -4.8rem;
+        left: 0;
+        height: 4.8rem;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: $color-ritch-black;
+        z-index: 1000;
+      }
+
+      &--hidden {
+        transform: translateY(0);
+      }
+
+      &--visible {
+        transform: translateY(4.8rem);
+      }
+    }
+  }
+}

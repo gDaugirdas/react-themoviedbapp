@@ -1,0 +1,26 @@
+.button {
+  &--bold {
+    font-size: 1.7rem;
+    color: $color-ritch-black;
+    background-color: $color-yellow;
+    border: 0;
+    line-height: 5rem;
+    padding: 0 0.5rem;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+    margin: 0.5rem;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    width: 18rem;
+    align-self: center;
+
+    &:disabled {
+      background-color: $color-ash;
+    }
+
+    @include small {
+      width: 100%;
+      margin: 0.5rem auto;
+    }
+  }
+}

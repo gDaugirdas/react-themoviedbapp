@@ -1,0 +1,207 @@
+@import '../../scss/variables.scss';
+@import '../../scss/layout.scss';
+
+.media {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    &--container {
+      position: relative;
+    }
+    &-item {
+      display: flex;
+      padding: 1.5rem 1rem;
+      border-bottom: 0.2rem solid $color-ritch-black;
+      width: 50%;
+      &:nth-of-type(-n + 2) {
+        padding: 0 1rem 1.5rem 1rem;
+      }
+    }
+
+    &-secondary {
+      font-size: 2.4rem;
+      &--container {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: 2.4rem;
+      color: $color-ritch-black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &-misc {
+      &--container {
+        display: flex;
+        color: $color-ash;
+        font-size: 1.8rem;
+        padding: 0.5rem 0;
+      }
+    }
+    &-separator {
+      padding: 0 0.3rem;
+    }
+    &-rating {
+      font-size: 2rem;
+      &--container {
+        display: flex;
+        align-items: center;
+      }
+      &-icon {
+        fill: $color-yellow;
+        width: 1.8rem;
+        margin-right: 0.3rem;
+      }
+    }
+
+    &-overview {
+      font-size: 1.8rem;
+      flex: 1;
+      padding: 0.5rem 0;
+    }
+    &-button {
+      &--container {
+        flex: 1;
+        align-items: center;
+        display: flex;
+        padding-top: 1rem;
+      }
+      &-scroll {
+        position: fixed;
+        bottom: 1rem;
+        border-radius: 50%;
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        border: 0.3rem solid $color-ritch-black;
+        background-color: $color-yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: 0;
+        cursor: pointer;
+        &--container {
+          position: absolute;
+          right: 7rem;
+        }
+        &--hidden {
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0.1s ease-out, opacity 0.1s ease-out;
+        }
+        &--visible {
+          visibility: visible;
+          opacity: 1;
+          transition: visibility 0.3s ease, opacity 0.3s ease;
+        }
+        &-icon {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      &--container {
+        display: flex;
+        justify-content: center;
+        width: 20rem;
+        overflow: hidden;
+        border-radius: $special-border-radius;
+        border: 0.2rem solid $color-yellow;
+      }
+    }
+  }
+
+  @include medium {
+    &__list {
+      &-item {
+        flex-direction: column;
+        &:nth-of-type(-n + 2) {
+          padding: 0 0 1.5rem;
+        }
+        padding: 2rem 0;
+      }
+      &-link {
+        text-align: center;
+        font-size: 2.6rem;
+      }
+      &-secondary {
+        &--container {
+          padding: 1rem 1rem 0;
+        }
+      }
+      &-primary {
+        &--container {
+          width: 70%;
+          margin: 0 auto;
+        }
+      }
+      &-image {
+        &--container {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include small {
+    &__list {
+      &-item {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 0;
+        &:nth-of-type(-n + 2) {
+          padding: 1rem 0 0 0;
+        }
+        padding: 1rem 0;
+      }
+      &-primary {
+        &--container {
+          width: 75%;
+          margin: 0 auto;
+        }
+      }
+      &-misc {
+        &--container {
+          font-size: 1.6rem;
+          padding: 0.5rem 0 0 0;
+        }
+      }
+      &-overview {
+        font-size: 1.4rem;
+        padding: 0.5rem 0 1rem;
+      }
+      &-link {
+        font-size: 2rem;
+      }
+      &-secondary {
+        &--container {
+          width: 90%;
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+      &-button {
+        &--container {
+          padding: 1rem 0;
+        }
+      }
+      &-rating {
+        font-size: 1.6rem;
+
+        &-icon {
+          width: 1.6rem;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.react-multiple-carousel__arrow {
+  border-radius: 0.5rem !important;
+  min-width: 6rem !important;
+  min-height: 6rem !important;
+  border: 0.2rem solid $color-white !important;
+  &::before {
+    font-size: 3rem !important;
+  }
+
+  &--left {
+    left: 1% !important;
+  }
+  &--right {
+    right: 1% !important;
+  }
+}
+
+.carousel {
+  &-container {
+    width: 100%;
+  }
+
+  &-item {
+    padding: 0 0.4rem;
+  }
+
+  @include small {
+    &-item {
+      padding: 0 0.25rem;
+    }
+  }
+
+  // For recentlyViewed component
+  &__clear {
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    cursor: pointer;
+    color: $color-yellow;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__empty {
+    color: $color-ash;
+  }
+}

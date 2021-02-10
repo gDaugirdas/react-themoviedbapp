@@ -1,0 +1,26 @@
+@import '../../scss/variables.scss';
+@import '../../scss/layout.scss';
+
+.footer {
+  color: $color-white;
+  background-color: $color-ritch-black;
+  height: 10rem;
+  font-size: 1.4rem;
+  &--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+  }
+
+  &__link {
+    color: $color-yellow;
+    text-decoration: none;
+  }
+
+  @include small {
+    height: 8rem;
+    font-size: 1.2rem;
+  }
+}

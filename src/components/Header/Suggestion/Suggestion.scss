@@ -1,0 +1,47 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/layout.scss';
+
+.suggestion {
+  &__item {
+    border-bottom: 0.1rem solid $color-grey;
+    display: flex;
+    text-decoration: none;
+    &:hover {
+      background-color: $color-suggestion-hover;
+      text-decoration: underline;
+      text-decoration-color: $color-white;
+      text-underline-position: under;
+    }
+  }
+  &__image {
+    width: 5.2rem;
+    height: 7.5rem;
+    border-radius: $base-border-radius;
+    &--container {
+      padding: 0.5rem;
+    }
+  }
+  &__text {
+    &--container {
+      color: $color-white;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__misc {
+    &--container {
+      line-height: 1.5;
+      color: $color-misc-text;
+    }
+  }
+}

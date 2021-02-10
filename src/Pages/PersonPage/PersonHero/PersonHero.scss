@@ -1,0 +1,69 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/layout.scss';
+
+.person {
+  &__hero {
+    &--container {
+      display: flex;
+      border-top: 0.2rem solid $color-ritch-black;
+      padding: 1rem 0;
+    }
+  }
+  &__biography {
+    &--container {
+      font-size: 2rem;
+      flex: 1;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: $base-border-radius;
+    cursor: pointer;
+    display: block;
+    &--container {
+      margin-right: 1rem;
+      width: 28rem;
+      height: 44rem;
+    }
+  }
+
+  &__details {
+    padding: 0.2rem 0;
+    &--container {
+      padding-top: 1rem;
+    }
+  }
+
+  @include medium {
+    &__biography {
+      &--container {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  @include small {
+    &__hero {
+      &--container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    &__image {
+      &--container {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+    }
+    &__biography {
+      &--container {
+        padding: 1rem 0.5rem 0;
+        width: 100%;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

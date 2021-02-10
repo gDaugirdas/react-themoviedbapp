@@ -1,0 +1,42 @@
+@import '../../variables.scss';
+
+.watchlist {
+  display: flex;
+  width: 100%;
+
+  &--empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    fill: $color-white;
+  }
+
+  &__paragraph {
+    font-size: 2.4rem;
+    padding: 0.5rem 0;
+    color: $color-white;
+    &-secondary {
+      color: $color-dim-gray;
+    }
+    &--container {
+      padding: 1rem 0 2rem;
+      text-align: center;
+    }
+  }
+
+  @include small {
+    &__icon {
+      width: 5rem;
+      height: 5rem;
+    }
+    &__paragraph {
+      font-size: 1.8rem;
+    }
+  }
+}

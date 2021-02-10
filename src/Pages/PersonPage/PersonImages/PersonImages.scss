@@ -1,0 +1,18 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/layout.scss';
+
+.person {
+  &__images {
+    &--container {
+      border-top: 0.2rem solid $color-ritch-black;
+      width: 100%;
+      padding: 1rem 0;
+    }
+
+    &-list {
+      &-item {
+        cursor: pointer;
+      }
+    }
+  }
+}

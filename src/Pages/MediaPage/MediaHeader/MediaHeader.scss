@@ -1,0 +1,97 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/layout.scss';
+
+.media {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.2rem solid $color-ritch-black;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__primary {
+    &--container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__genres {
+    padding-bottom: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__misc {
+    &--container {
+      font-size: 1.6rem;
+      display: flex;
+      padding-bottom: 0.5rem;
+    }
+    &-separator {
+      margin: 0 0.5rem;
+    }
+  }
+  &__runtime {
+    font-size: 1.6rem;
+  }
+
+  &__rating {
+    font-size: 5.2rem;
+    font-weight: 600;
+    &--container {
+      display: flex;
+      align-items: center;
+    }
+    &-reference {
+      font-size: 3.6rem;
+      color: $color-ash;
+      margin-left: 0.5rem;
+    }
+    &-icon {
+      margin-left: 1rem;
+      fill: $color-yellow;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  @include medium {
+    &__rating {
+      font-size: 4.6rem;
+      &-reference {
+        font-size: 3.2rem;
+      }
+      &-icon {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+  @include small {
+    &__title {
+      font-size: 2.6rem;
+      padding-bottom: 0.2rem;
+    }
+    &__genres {
+      padding-bottom: 0.2rem;
+    }
+
+    &__misc {
+      &--container {
+        padding-bottom: 0.2rem;
+      }
+    }
+    &__rating {
+      &--container {
+        display: none;
+      }
+    }
+  }
+}

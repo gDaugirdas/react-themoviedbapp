@@ -1,0 +1,75 @@
+@import './variables.scss';
+
+$medium-padding-sides: 4rem;
+$small-padding-sides: 2rem;
+$small-max-width: 767px;
+$medium-max-width: 1200px;
+
+body {
+  margin: 0;
+  background-color: $color-ritch-black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &--center {
+    justify-content: center;
+  }
+  &--top {
+    justify-content: flex-start;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+@mixin small {
+  @media (max-width: $small-max-width) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: $medium-max-width) {
+    @content;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: calc(#{$medium-max-width} + (2 * #{$medium-padding-sides}));
+
+  @include medium {
+    width: 100%;
+    padding-right: $medium-padding-sides;
+    padding-left: $medium-padding-sides;
+  }
+
+  @include small {
+    padding-right: $small-padding-sides;
+    padding-left: $small-padding-sides;
+  }
+}
+
+.content {
+  background-color: $color-white;
+  border-radius: $special-border-radius;
+  padding: 2rem 1.5rem;
+
+  &--black {
+    background-color: $color-ritch-black;
+  }
+
+  @include small {
+    padding: 1rem;
+  }
+}
+
+:root {
+  --small-max-width: #{$small-max-width};
+  --medium-max-width: #{$medium-max-width};
+}

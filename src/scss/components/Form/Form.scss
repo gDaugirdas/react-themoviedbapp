@@ -1,0 +1,110 @@
+@import '../../layout.scss';
+@import '../../variables.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 1rem 0;
+  &--container {
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid $color-white;
+    padding: 1.5rem;
+    border-radius: $base-border-radius;
+    width: 40rem;
+    background-color: #121212;
+    margin: auto auto;
+  }
+
+  &__logo {
+    width: 16rem;
+    &--container {
+      padding: 0.8rem 0;
+      display: flex;
+      align-self: center;
+      justify-self: flex-end;
+    }
+  }
+
+  &__error {
+    font-size: 2rem;
+    text-align: center;
+    background-color: $color-error;
+    padding: 0.5rem 0;
+    margin-bottom: 0.8rem;
+    border-radius: $base-border-radius;
+    width: 100%;
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+    padding: 0.5rem 0;
+    color: $color-yellow;
+  }
+
+  &__label {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column-reverse;
+    &-text {
+      margin-left: 0.3rem;
+      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__input {
+    height: 4.5rem;
+    border: 0;
+    margin: 0.5rem 0 1.5rem;
+    padding: 0 0.8rem;
+    font-size: 2rem;
+    border: 0.1rem solid $color-dim-gray;
+    border-radius: $base-border-radius;
+    outline: 0;
+    &:focus {
+      box-shadow: inset 0px 0px 0.1rem 0.1rem $color-yellow;
+    }
+  }
+
+  &__secondary-text {
+    font-size: 1.6rem;
+    padding: 0 0 0.3rem;
+    &--container {
+      width: 100%;
+    }
+  }
+
+  &__dashboard {
+    &-action {
+      &--container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        font-size: 2.4rem;
+      }
+      &-text {
+        padding: 0.5rem 0;
+      }
+    }
+  }
+  @include small {
+    &--container {
+      width: 100%;
+    }
+
+    &__logo {
+      width: 14rem;
+    }
+    &__label {
+      &-text {
+        font-size: 2rem;
+      }
+    }
+  }
+}
